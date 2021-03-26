@@ -1,21 +1,20 @@
 import React from "react"
 import ReactDOM from "react-dom"
+import "./index.css"
+import TodoList from "./todo.js"
 
-const messages = ["Hello React", "Hello JS", "Hello HTML/CSS"]
-const Messages = () => {
+const Content = () => {
   return (
-    <div>
+    <div className="wrapper">
       <h1>Messages</h1>
-      {messages.map((message) => (
-        <p key={messages}>{message}</p>
-      ))}
+      <TodoList />
     </div>
   )
 }
 
 ReactDOM.render(
   <>
-    <Messages title={true} />
+    <Content />
   </>,
   document.querySelector("#root"),
 )
